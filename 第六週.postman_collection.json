@@ -1,0 +1,114 @@
+{
+	"info": {
+		"_postman_id": "dd0fd5af-99d1-42e1-b03b-dd050895fd74",
+		"name": "第六週",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "4865412"
+	},
+	"item": [
+		{
+			"name": "USER",
+			"item": [
+				{
+					"name": "取得個人資料",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOTI2MDUxYjU3OWZkOThhMTNmZTEwYSIsImlhdCI6MTY1Mzc2MDExNSwiZXhwIjoxNjU0MzY0OTE1fQ.9OrkmquOL8fl3q-NSHPWRWhDe7HDClQTq3KSDiXicd0",
+								"type": "text"
+							}
+						],
+						"url": "https://tranquil-meadow-02153.herokuapp.com/users/profile"
+					},
+					"response": []
+				},
+				{
+					"name": "註冊",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\": \"test2\",\r\n\"email\": \"test9@teat.com\",\r\n\"password\": \"123456789\",\r\n\"confirmPassword\":\"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://tranquil-meadow-02153.herokuapp.com/users/sign_up"
+					},
+					"response": []
+				},
+				{
+					"name": "登入",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"test9@teat.com\",\r\n    \"password\":\"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://tranquil-meadow-02153.herokuapp.com/users/sign_in"
+					},
+					"response": []
+				},
+				{
+					"name": "重設密碼",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOTI2MDUxYjU3OWZkOThhMTNmZTEwYSIsImlhdCI6MTY1Mzc2MDA4MSwiZXhwIjoxNjU0MzY0ODgxfQ.n6e_lnPqyC2rT5Z8_IXP9DLANpXSYPIN9Z4qeM57vwo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"password\": \"12345678\",\r\n\"confirmPassword\":\"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://tranquil-meadow-02153.herokuapp.com/users/updatePassword"
+					},
+					"response": []
+				},
+				{
+					"name": "更新個人資料",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOTI2MDUxYjU3OWZkOThhMTNmZTEwYSIsImlhdCI6MTY1Mzc2MDExNSwiZXhwIjoxNjU0MzY0OTE1fQ.9OrkmquOL8fl3q-NSHPWRWhDe7HDClQTq3KSDiXicd0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\": \"test3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://tranquil-meadow-02153.herokuapp.com/users/profile"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
